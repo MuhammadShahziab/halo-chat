@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <ToastContext />
 
-          <main className="">{children}</main>
+          <main>{children}</main>
         </Provider>
       </body>
     </html>

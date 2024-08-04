@@ -54,6 +54,7 @@ const GroupInfoPage = () => {
       getChatDetail();
     }
   }, [chatId]);
+
   const updateGroupInfo = async (data) => {
     try {
       setLoading(true);
@@ -86,7 +87,7 @@ const GroupInfoPage = () => {
   ) : (
     <div>
       <TopBar />
-      <div className="md:max-w-3xl  mx-auto flex flex-col w-full h-full  py-4">
+      <div className="md:max-w-3xl  mx-auto flex flex-col w-full h-full  px-5 py-4">
         <div className="flex justify-between md:flex-row flex-col    w-full  lg:mt-11 py-4  ">
           <div className="flex-1 ">
             <form className="flex justify-center  h-full items-center">
@@ -101,7 +102,7 @@ const GroupInfoPage = () => {
                   uploadPreset="v3sbor11"
                   onUpload={uploadGroupPhoto}
                 >
-                  <span className="absolute -bottom-2 cursor-pointer md:bottom-0 right-1 w-11 h-11  md:w-14 md:h-14 rounded-full bg-green-500 flex justify-center items-center">
+                  <span className="absolute -bottom-2 cursor-pointer md:bottom-0 right-1 w-11 h-11  md:w-14 md:h-14 rounded-full bg-green-400 flex justify-center items-center">
                     {" "}
                     <AddAPhotoOutlinedIcon
                       sx={{ color: "white" }}
@@ -127,7 +128,7 @@ const GroupInfoPage = () => {
                     type="text"
                   ></input>
                   <GroupsIcon
-                    sx={{ fontSize: 25, color: "#D3D3D3" }}
+                    sx={{ fontSize: 30, color: "#D3D3D3" }}
                   ></GroupsIcon>{" "}
                 </div>
                 {errors.groupname && (

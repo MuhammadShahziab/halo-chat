@@ -1,4 +1,4 @@
-// File: C:\Users\shahzaib\Desktop\halochat\app\(root)\chats\page.jsx
+// File: C:\Users\shahzaib\Desktop\halo-chat\app\(root)\chats\page.jsx
 import * as entry from '../../../../../app/(root)/chats/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

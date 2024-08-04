@@ -17,12 +17,12 @@ const BottomBar = () => {
   const user = session?.user;
 
   return (
-    <div className="fixed bottom-0 z-50 w-full flex justify-between items-center px-5 py-2 bg-white sm:hidden">
+    <div className="fixed bottom-0 z-50 w-full flex   justify-between items-center px-5 py-2 sm:hidden">
       <Link
         href="/chats"
         className={`${
           pathname === "/chats" ? "text-green-600" : ""
-        } flex flex-col gap-y-1 items-center`}
+        } flex flex-col gap-y-1 text-sm items-center`}
       >
         <span
           className={`${
@@ -37,7 +37,7 @@ const BottomBar = () => {
         href="/create"
         className={`${
           pathname === "/create" ? "text-green-600" : ""
-        } flex flex-col items-center gap-y-1`}
+        } flex flex-col text-sm items-center gap-y-1`}
       >
         <span
           className={`${
@@ -49,8 +49,8 @@ const BottomBar = () => {
         Contacts
       </Link>
 
-      <div className="flex flex-col items-center">
-        <span className="px-3 py-0.5 flex justify-center items-center rounded-xl">
+      <div className="flex text-sm flex-col items-center">
+        <span className="px-3  py-0.5 flex justify-center items-center rounded-xl">
           <Logout onClick={handleLogout} />
         </span>
 
@@ -61,7 +61,7 @@ const BottomBar = () => {
         href="/profile"
         className={`${
           pathname === "/contacts" ? "text-green-600" : ""
-        } flex flex-col items-center gap-y-1`}
+        } flex flex-col items-center text-sm gap-y-1`}
       >
         <span
           className={`${

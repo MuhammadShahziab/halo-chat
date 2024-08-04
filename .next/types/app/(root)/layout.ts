@@ -1,4 +1,4 @@
-// File: C:\Users\shahzaib\Desktop\halochat\app\(root)\layout.js
+// File: C:\Users\shahzaib\Desktop\halo-chat\app\(root)\layout.js
 import * as entry from '../../../../app/(root)/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

@@ -113,7 +113,7 @@ const ChatList = ({ currentChatId }) => {
   return loading ? (
     <Loader />
   ) : (
-    <div className="max-h-[90vh] max-sm:h-[80vh] max-sm:min-h-[80vh] h-[90vh] flex flex-col md:gap-5 md:px-5  md:bg-slate-50">
+    <div className="max-h-[90vh] max-sm:h-[82vh] max-sm:min-h-[82vh]  h-[90vh] flex flex-col md:gap-5 md:px-5  md:bg-slate-50">
       <div className="mt-2 md:mt-4 max-md:px-3">
         <input
           className="outline-none px-3 py-2 bg-[#F0F2F5] rounded-full w-full"
@@ -122,7 +122,7 @@ const ChatList = ({ currentChatId }) => {
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      <div className="max-md:mt-3 w-full flex flex-col md:bg-white md:pr-1 max-md:px-4 md:max-h-[76vh] md:h-[76vh] h-full md:overflow-y-scroll">
+      <div className="max-md:mt-3 w-full flex flex-col md:bg-white md:pr-1  md:max-h-[76vh] md:h-[76vh] h-full md:overflow-y-scroll">
         {chats?.length > 0 ? (
           chats.map((chat, index) => (
             <ChatBox

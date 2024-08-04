@@ -20,7 +20,7 @@ const ChatBox = ({ chat, index, currentUser, currentChatId }) => {
       onClick={() => router.push(`/chats/${chat._id}`)}
       className={`${
         chat?._id === currentChatId ? "bg-green-100" : ""
-      }  md:px-4 gap-x-3  py-3 hover:bg-green-100 rounded cursor-pointer flex items-start justify-between `}
+      }  px-4 gap-x-3  py-3 hover:bg-green-100 rounded cursor-pointer flex items-start justify-between `}
     >
       <div className="flex gap-x-4 items-center w-full">
         {chat?.isGroup ? (

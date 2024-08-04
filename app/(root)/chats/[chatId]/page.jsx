@@ -32,19 +32,19 @@ const ChatPage = () => {
   }, [chatId, currentUser]);
 
   return (
-    <div className="max-h-screen min-h-screen">
-      <div>
+    <>
+      <div className="max-md:hidden">
         <TopBar />
       </div>
-      <div className="w-full h-full flex gap-5 ">
+      <div className="w-full h-full  flex gap-5 ">
         <div className="max-md:hidden md:w-1/2 lg:w-1/3">
           <ChatList currentChatId={chatId}></ChatList>
         </div>
-        <div className="w-full md:w-1/2 lg:w-2/3  h-full">
+        <div className="w-full md:w-1/2 lg:w-2/3 max-md:min-h-screen h-full">
           <ChatDetail currentUser={currentUser} chatId={chatId}></ChatDetail>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

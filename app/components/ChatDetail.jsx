@@ -118,8 +118,8 @@ const ChatDetail = ({ chatId }) => {
   return loading ? (
     <Loader />
   ) : (
-    <div className="max-h-[92vh] h-[92vh] md:max-h-[90vh] md:h-[90vh] flex flex-col">
-      <div className="bg-gray-50 flex items-center gap-4 px-6 py-3 rounded-md ">
+    <div className="max-h-[100vh] h-[100vh] md:max-h-[90vh] md:h-[90vh] flex flex-col">
+      <div className="bg-gray-50 flex items-center gap-4 justify-between px-3 md:px-6 py-3 rounded-md ">
         {chat?.isGroup ? (
           <>
             <Link
@@ -131,12 +131,12 @@ const ChatDetail = ({ chatId }) => {
                 src={chat?.groupPhoto || "/assets/group.jpg"}
                 alt="group_photo"
               ></img>
-              <p className="font-medium ">{chat?.name}</p>{" "}
+              <p className="font-medium  max-md:text-sm">{chat?.name}</p>{" "}
             </Link>
 
             <div className="flex items-center">
               <p className="font-semibold">{chat?.members.length} </p>
-              <span className="text-sm ml-1">Members</span>
+              <span className="text-[12px] md:text-sm ml-1">Members</span>
             </div>
           </>
         ) : (

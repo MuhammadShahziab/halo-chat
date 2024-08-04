@@ -1,4 +1,4 @@
-// File: C:\Users\shahzaib\Desktop\halochat\app\api\users\route.js
+// File: C:\Users\shahzaib\Desktop\halo-chat\app\api\users\route.js
 import * as entry from '../../../../../app/api/users/route.js'
 import type { NextRequest } from 'next/server.js'
 

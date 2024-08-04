@@ -148,7 +148,7 @@ const Contacts = () => {
                   {selectedContacts?.map((contact, index) => (
                     <p
                       key={index}
-                      className="py-2 px-4  text-center max-lg:min-w-32 bg-sky-100 text-sky-500 font-medium rounded-md"
+                      className="py-2 px-4  text-center max-lg:min-w-32  whitespace-nowrap bg-sky-100 text-sky-500 font-medium rounded-md"
                     >
                       {contact?.username}
                     </p>

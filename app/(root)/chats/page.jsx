@@ -6,7 +6,7 @@ import React from "react";
 
 const ChatsPage = () => {
   return (
-    <div className="  ">
+    <>
       <TopBar />
       <div className="flex justify-between h-full  overflow-y-scroll   max-lg:gap-8">
         <div className="w-full md:w-1/2 lg:w-1/3  ">
@@ -16,8 +16,9 @@ const ChatsPage = () => {
           <Contacts></Contacts>
         </div>
       </div>
+
       <BottomBar />
-    </div>
+    </>
   );
 };
 
