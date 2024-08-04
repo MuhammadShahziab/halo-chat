@@ -1,27 +1,22 @@
 "use client";
-import { useParams, usePathname } from "next/navigation";
+import { useParams } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
-import AddAPhotoOutlinedIcon from "@mui/icons-material/AddAPhotoOutlined";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import PhoneEnabledOutlinedIcon from "@mui/icons-material/PhoneEnabledOutlined";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import Loader from "@app/components/Loader";
 import { useSession } from "next-auth/react";
-import { NavigateNext } from "@mui/icons-material";
-import CloseIcon from "@mui/icons-material/Close";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+
 import ChatImages from "@app/components/ChatImages";
 import TopBar from "@app/components/TopBar";
 const ChatInfoPage = () => {
   const [loading, setLoading] = useState(true);
-  const [chat, setChat] = useState({});
   const [otherMembers, setOtherMembers] = useState([]);
   const [photos, setPhotos] = useState([]);
   const { chatId } = useParams();
+
   const { data: session } = useSession();
   const currentUser = session?.user;
-  const [selectedPhotoIndex, setSelectedPhotoIndex] = useState(null);
 
   const photosContainerRef = useRef();
 
@@ -29,7 +24,7 @@ const ChatInfoPage = () => {
     try {
       const res = await fetch(`/api/chats/${chatId}`);
       const data = await res.json();
-      setChat(data);
+
       setOtherMembers(
         data?.members?.filter((member) => member._id !== currentUser.id)
       );
@@ -43,13 +38,9 @@ const ChatInfoPage = () => {
       setLoading(false);
     } catch (error) {
       console.log(error);
+    } finally {
       setLoading(false);
     }
-  };
-
-  const handlePhoto = () => {
-    setSelectedPhoto(null);
-    console.log("check phot11");
   };
 
   useEffect(() => {
@@ -57,23 +48,6 @@ const ChatInfoPage = () => {
       getChat();
     }
   }, [currentUser]);
-  const scrollPhotos = (direction) => {
-    const scrollAmount = direction === "left" ? -150 : 150;
-    photosContainerRef.current.scrollBy({
-      left: scrollAmount,
-      behavior: "smooth",
-    });
-  };
-  const showNextPhoto = () => {
-    if (selectedPhotoIndex < photos.length - 1) {
-      setSelectedPhotoIndex((prevIndex) => prevIndex + 1);
-    }
-  };
-  const showPreviousPhoto = () => {
-    if (selectedPhotoIndex > 0) {
-      setSelectedPhotoIndex((prevIndex) => prevIndex - 1);
-    }
-  };
 
   return loading ? (
     <Loader />
