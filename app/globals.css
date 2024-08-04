@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.auth {
+  @apply w-full h-lvh flex items-center justify-center;
+}
+
+::-webkit-scrollbar {
+  @apply w-2 h-2; /* Adjust the width and height of the scrollbar */
+}
+::-webkit-scrollbar-track {
+  @apply  bg-gray-100; /* Background of the scrollbar track */
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-[#CED0D1] rounded-lg; /* Color of the scrollbar thumb (indicator) */
+}
+
+.content {
+  @apply w-1/3 py-7 px-4 max-sm:w-5/6 max-lg:w-2/3 max-xl:w-1/2 flex flex-col items-center justify-center gap-6 bg-white rounded-3xl;
+}
+.input {
+  @apply flex items-center pr-3 border rounded-full; 
+}
+
+.input_field {
+  @apply bg-transparent outline-none border-none w-full py-3 px-4  rounded-full text-black; 
+}
+
+.btn{
+  @apply rounded-full flex items-center gap-x-2 justify-center shadow-md px-4 py-2 w-full bg-green-400 text-white hover:bg-green-500
+}
+.chat_profile{
+  @apply w-12 h-12 border rounded-full object-cover
+}
+
+button:disabled{
+@apply bg-green-300 cursor-not-allowed hover:bg-green-300
+}
+
+.scroll-hide::-webkit-scrollbar{
+  display: none;
+}
+
+/* Top Bar */
+.topbar{
+  @apply flex justify-between  h-[8vh] md:h-[10vh] items-center px-4 md:pr-10 md:pl-5 py-2 md:border-b
+}
+.menu{
+  @apply  hidden md:flex items-center gap-x-6 
+}
+.profileImage{
+  @apply w-11 h-11 flex justify-center items-center object-cover object-center cursor-pointer
+}
