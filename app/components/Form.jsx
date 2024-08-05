@@ -64,7 +64,7 @@ const Form = ({ type }) => {
     }
   };
   return (
-    <div className="  h-full flex-col flex   items-start md:items-center justify-between md:justify-center  px-6 md:px-0  ">
+    <div className="  h-full flex-col flex   items-start md:items-center md:justify-center  px-6 md:px-0  ">
       <div className="md:w-2/5 mt-20 md:mt-0">
         <div className="flex md:hidden justify-center gap-x-1 items-center mb-6">
           <WhatsApp sx={{ fontSize: 80, color: "#4ADE80" }}></WhatsApp>
@@ -168,7 +168,7 @@ const Form = ({ type }) => {
           </Link>
         )}
       </div>
-      <p className="w-full text-center mb-11 md:hidden flex  font-medium text-[12px] text-gray-400/90">
+      <p className="w-full text-center mt-16 md:hidden flex justify-center  font-medium text-[12px] text-gray-400/90">
         Developed by Shahzaib
       </p>
     </div>

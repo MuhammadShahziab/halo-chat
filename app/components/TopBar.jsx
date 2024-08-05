@@ -11,9 +11,9 @@ const TopBar = () => {
   const user = session?.user;
 
   const handleLogout = async () => {
-    const callback = process.env.NEXT_PUBLIC_CALLBACK_URL || "/";
-
-    await signOut({ callback });
+    const callbackUrl = process.env.NEXT_PUBLIC_CALLBACK_URL || "/";
+    console.log("Logging out to: ", callbackUrl); // Add this line for debugging
+    await signOut({ callbackUrl });
   };
   return (
     <div className="topbar ">
