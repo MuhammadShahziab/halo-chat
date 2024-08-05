@@ -1,5 +1,4 @@
 "use client";
-
 import { Logout, Person2Outlined } from "@mui/icons-material";
 import { signOut, useSession } from "next-auth/react";
 import Link from "next/link";
@@ -10,7 +9,8 @@ const BottomBar = () => {
   const pathname = usePathname();
 
   const handleLogout = async () => {
-    signOut({ callbackUrl: "/" });
+    const callback = process.env.NEXT_PUBLIC_CALLBACK_URL || "/";
+    signOut({ callback });
   };
 
   const { data: session } = useSession();

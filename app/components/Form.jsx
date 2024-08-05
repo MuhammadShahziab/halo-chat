@@ -168,7 +168,7 @@ const Form = ({ type }) => {
           </Link>
         )}
       </div>
-      <p className="w-full text-center mb-6 md:hidden  font-medium text-[12px] text-gray-400/90">
+      <p className="w-full text-center mb-11 md:hidden flex  font-medium text-[12px] text-gray-400/90">
         Developed by Shahzaib
       </p>
     </div>
