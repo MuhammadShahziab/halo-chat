@@ -141,7 +141,7 @@ const GroupInfoPage = () => {
                 {chat?.members?.map((member, index) => (
                   <p
                     key={index}
-                    className="py-2 md:px-4 px-2 text-sm text-center max-lg:min-w-24 bg-sky-100 text-sky-500 font-medium rounded-md"
+                    className="py-2 md:px-4 px-2 text-sm text-center max-lg:min-w-20 bg-sky-100 text-sky-500 font-medium rounded-md"
                   >
                     {member?.username}
                   </p>
